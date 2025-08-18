@@ -1,0 +1,123 @@
+/* Container principal */
+.skill-page {
+    background-color: #1f1f2e; /* plus doux que le noir pur */
+    color: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: 1.5rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation compétences */
+.skill-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.btn-skill-nav {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    background-color: #646cff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.25s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-skill-nav:hover {
+    background-color: #535bf2;
+    box-shadow: 0 5px 15px rgba(100, 108, 255, 0.4);
+}
+
+/* Titre de la compétence */
+.skill-page h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Description */
+.skill-page p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: justify;
+    color: #dcdcdc;
+}
+
+/* Liste des exemples */
+.skill-examples {
+    list-style: none;
+    padding-left: 0;
+}
+.skill-examples li {
+    position: relative;
+    padding-left: 1.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    transition: color 0.3s;
+}
+.skill-examples li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #646cff;
+    font-weight: bold;
+}
+
+/* Liens */
+.skill-page a {
+    color: #646cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.skill-page a:hover {
+    color: #535bf2;
+}
+
+/* Footer */
+.footer {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #444;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+.footer a {
+    margin: 0 0.5rem;
+    color: #646cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.footer a:hover {
+    color: #535bf2;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .skill-page {
+        padding: 6rem 4rem;
+    }
+    .skill-page h1 {
+        font-size: 3.5rem;
+    }
+    .skill-page p {
+        font-size: 1.25rem;
+    }
+    .skill-examples li {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skill-page {
+        padding: 6rem 6rem;
+    }
+}

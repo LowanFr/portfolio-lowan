@@ -1,0 +1,87 @@
+.skills-section {
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: #242424;
+    color: #ffffff;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Grille des compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte générique */
+.skill-card {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Titre de la compétence */
+.skill-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Hard skills --- */
+.hard-skill .skill-bar-background {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #333;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+.hard-skill .skill-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #646cff, #535bf2);
+    border-radius: 0.25rem;
+    transition: background 0.3s;
+}
+.hard-skill:hover .skill-bar {
+    background: linear-gradient(90deg, #ff7f50, #ffb347);
+}
+
+/* Niveau de compétence */
+.skill-level {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* --- Soft skills --- */
+.soft-skill .soft-skill-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #646cff, #535bf2);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: transform 0.2s, background 0.3s;
+    margin-bottom: 0.5rem;
+}
+.soft-skill:hover .soft-skill-badge {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff7f50, #ffb347);
+}
