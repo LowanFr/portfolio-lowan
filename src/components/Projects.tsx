@@ -7,6 +7,7 @@ import neopolisImage from '../assets/neopolis.png';
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
+import {useNavigate} from "react-router-dom";
 
 const projects = [
     {
@@ -47,6 +48,8 @@ const projects = [
 ];
 
 export default function Projects() {
+    const navigate = useNavigate();
+
     return (
         <motion.section
             id="projects"
@@ -67,6 +70,10 @@ export default function Projects() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.15 }}
                         whileHover={{ scale: 1.05 }}
+                        onClick={() => {
+                            navigate(project.link);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
                     >
                         <img src={project.image} alt={project.title} className="project-image" />
 

@@ -14,6 +14,19 @@ const skillDetails: Record<string, { title: string; description: string; example
             "Diverses d'autres projets mineures que ça soit au cours des études ou dans le cadre personnel."
             ]
     },
+    "Java": {
+        title: "Java",
+        description: "J’ai acquis une solide maîtrise de Java, un langage orienté objet très utilisé pour le développement d’applications robustes et évolutives. Grâce à Java, je suis capable de concevoir des programmes modulaires, de gérer des collections de données complexes, de manipuler des fichiers et d’interagir avec des bases de données. J’ai également développé des applications console et des projets académiques avec une logique métier claire et maintenable. Parmi mes projets, j’ai utilisé Java pour :",
+        examples: [
+            "Créer un jeu de Uno avec gestion des règles, des joueurs humains et IA dans un terminal.",
+            "Faire une application mobile avec gestion de permissions, de notifications et d'interactions utilisateur.",
+            "Réaliser d'une interface graphique avec JavaFX avec des multiples interactions utilisateur.",
+            "Créer un jeu basique avec une interface graphique en utilisant JavaFX avec un pingouin qui se déplace sur une banquise qui s'amoindrie.",
+            "Implémenter des structures de données avancées pour des projets académiques, comme des arbres et des graphes.",
+            "Réaliser des petits jeux et exercices d’algorithmique pour renforcer ma compréhension de la programmation orientée objet.",
+            "Comprendre et réaliser les 'Design Patterns' comme le Singleton, le Factory, etc."
+        ]
+    }
 };
 
 export default function SkillPage() {

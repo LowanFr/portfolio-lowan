@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const skills = [
-    { name: "HTML-CSS", level: 0, soft_skill: false },
+    { name: "HTML-CSS", level: 80, soft_skill: false },
     { name: "Java", level: 0, soft_skill: false },
     { name: "C", level: 0, soft_skill: false },
     { name: "PHP", level: 0, soft_skill: false },
