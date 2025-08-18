@@ -1,4 +1,11 @@
 import '../styles/projects.css'
+import pikacordImage from '../assets/pikacord.png';
+import unosialImage from '../assets/unosial.png';
+import inoxtagImage from '../assets/inoxtag.png';
+import raidprotectImage from '../assets/raidprotect.png';
+import neopolisImage from '../assets/neopolis.png';
+import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
 const projects = [
@@ -6,35 +13,35 @@ const projects = [
         title: "Pikacord",
         description: "Fondateur",
         link: "projets/pikacord",
-        image: "/src/assets/pikacord.png",
+        image: pikacordImage,
         date: "2018-2024"
     },
     {
         title: "Neopolis",
         description: "Développeur",
         link: "projets/neopolis",
-        image: "/src/assets/neopolis.png",
+        image: neopolisImage,
         date: "2022-2023"
     },
     {
         title: "Inoxtag",
         description: "Responsable et développeur",
         link: "projets/inoxtag",
-        image: "/src/assets/inoxtag.png",
+        image: inoxtagImage,
         date: "2021-2023"
     },
     {
         title: "Unosial",
         description: "Responsable et développeur",
         link: "projets/unosial",
-        image: "/src/assets/unosial.png",
+        image: unosialImage,
         date: "2018-2023"
     },
     {
         title: "RaidProtect",
         description: "Responsable Staff",
         link: "projets/raidprotect",
-        image: "/src/assets/raidprotect.png",
+        image: raidprotectImage,
         date: "2019"
     }
 ];
@@ -70,9 +77,9 @@ export default function Projects() {
 
                         <div className="project-footer">
                             <span className="project-date">{project.date}</span>
-                            <a href={project.link} target="_blank" rel="noreferrer" className="project-link">
+                            <Link to={project.link} className="project-link">
                                 Voir le projet
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 ))}
