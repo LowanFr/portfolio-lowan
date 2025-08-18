@@ -2,41 +2,46 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../styles/project.css";
 import Navbar from "../Navbar.tsx";
+import pikacordImage from '../../assets/pikacord.png';
+import unosialImage from '../../assets/unosial.png';
+import inoxtagImage from '../../assets/inoxtag.png';
+import raidprotectImage from '../../assets/raidprotect.png';
+import neopolisImage from '../../assets/neopolis.png';
 
 const projectDetails = {
     unosial: {
         title: "Unosial",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/src/assets/Unosial.png",
+        image: unosialImage,
         technologies: ["React", "Tailwind", "Node.js"],
     },
     pikacord: {
         title: "Pikacord",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/src/assets/pikacord.png",
+        image: pikacordImage,
         technologies: ["React", "Framer Motion", "Express"],
     },
     inoxtag: {
         title: "Inoxtag",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/src/assets/inoxtag.png",
+        image: inoxtagImage,
         technologies: ["Next.js", "Tailwind", "Node.js"],
     },
     neopolis: {
         title: "Neopolis",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/src/assets/neopolis.png",
+        image: neopolisImage,
         technologies: ["React", "Vite", "Framer Motion"],
     },
     raidprotect: {
         title: "RaidProtect",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/src/assets/raidprotect.png",
+        image: raidprotectImage,
         technologies: ["React", "Node.js", "Express"],
     }
 };
