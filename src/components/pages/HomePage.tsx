@@ -1,5 +1,5 @@
-import '../../styles/Home.css';
-import Hero from '../Accueil.tsx';
+import '../../styles/home.css';
+import Home from '../Accueil.tsx';
 import Navbar from "../utils/Navbar.tsx";
 import About from '../About.tsx';
 import Skills from '../Skills.tsx';
@@ -11,7 +11,7 @@ function HomePage() {
     return (
         <div id="root">
             <Navbar />
-            <Hero />
+            <Home />
             <About />
             <Skills />
             <Projects />

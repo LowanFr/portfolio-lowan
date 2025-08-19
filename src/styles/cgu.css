@@ -26,3 +26,23 @@
     text-align: justify;
     color: #e6e6e6;
 }
+
+/* 🌞 Light mode */
+@media (prefers-color-scheme: light) {
+    .cgu-page {
+        color: #222;
+        background-color: #fdfdfd;
+    }
+
+    .cgu-page h1 {
+        color: #3949ab; /* bleu soutenu */
+    }
+
+    .cgu-page h2 {
+        color: #5c6bc0; /* bleu un peu plus clair */
+    }
+
+    .cgu-page p {
+        color: #444;
+    }
+}

@@ -26,3 +26,23 @@
     text-align: justify;
     color: #e6e6e6;
 }
+
+/* 🌞 Light mode */
+@media (prefers-color-scheme: light) {
+    .privacy-page {
+        color: #222;
+        background-color: #fdfdfd;
+    }
+
+    .privacy-page h1 {
+        color: #3949ab; /* bleu soutenu */
+    }
+
+    .privacy-page h2 {
+        color: #5c6bc0; /* bleu plus clair */
+    }
+
+    .privacy-page p {
+        color: #444;
+    }
+}

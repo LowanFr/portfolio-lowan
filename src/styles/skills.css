@@ -85,3 +85,46 @@
     transform: scale(1.1);
     background: linear-gradient(135deg, #ff7f50, #ffb347);
 }
+
+/* 🌞 Light mode */
+@media (prefers-color-scheme: light) {
+    .skills-section {
+        background-color: #f9f9f9;
+        color: #222222;
+    }
+
+    .skills-section h2 {
+        color: #535bf2;
+    }
+
+    .skills-grid H3 {
+        color: #333;
+    }
+
+    .skill-card {
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .skill-card:hover {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        background-color: #f5f5f5;
+    }
+
+    .hard-skill .skill-bar-background {
+        background-color: #ddd;
+    }
+
+    .skill-level {
+        color: #666;
+    }
+
+    .soft-skill .soft-skill-badge {
+        background: linear-gradient(135deg, #646cff, #535bf2);
+        color: #fff;
+    }
+
+    .soft-skill:hover .soft-skill-badge {
+        background: linear-gradient(135deg, #ff7f50, #ffb347);
+    }
+}
