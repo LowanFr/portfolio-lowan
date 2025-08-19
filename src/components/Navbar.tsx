@@ -1,9 +1,11 @@
 import '../styles/navbar.css';
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { useState } from "react";
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const [open, setOpen] = useState(false);
 
     const handleClick = (id: string) => {
         navigate("/");
@@ -15,6 +17,7 @@ export default function Navbar() {
                 window.scrollTo({ top: y, behavior: "smooth" });
             }
         }, 100);
+        setOpen(false); // ferme le menu sur mobile après clic
     };
 
     return (
@@ -23,7 +26,15 @@ export default function Navbar() {
                 <img src={logo} alt="Logo" className="nav-logo-img" />
                 <span>Esteban DOUILLET</span>
             </div>
-            <ul className="nav-links">
+
+            {/* Hamburger pour mobile */}
+            <div className="nav-hamburger" onClick={() => setOpen(!open)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul className={`nav-links ${open ? "open" : ""}`}>
                 <li><a onClick={() => handleClick("hero")}>Accueil</a></li>
                 <li><a onClick={() => handleClick("about")}>À propos</a></li>
                 <li><a onClick={() => handleClick("skills")}>Compétences</a></li>

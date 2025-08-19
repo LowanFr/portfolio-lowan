@@ -5,8 +5,10 @@
     font-family: system-ui, sans-serif;
     color: #fff;
     min-height: 100vh;
+    line-height: 1.7;
 }
 
+/* Bouton retour */
 .btn-back {
     display: inline-block;
     background-color: #646cff;
@@ -16,23 +18,60 @@
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 2rem;
 }
-
 .btn-back:hover {
     background-color: #535bf2;
     transform: scale(1.05);
 }
 
+/* Contenu principal */
 .project-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.project-text h1 {
-    color: #646cff;
+.project-text {
+    max-width: 800px; /* limite la largeur du texte pour un meilleur confort */
 }
 
+.project-text h1 {
+    color: #646cff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-text h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #a5adff;
+}
+
+.project-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #e6e6e6;
+}
+
+/* Mise en avant */
+.project-text p strong {
+    color: #ffffff;
+    background: rgba(100,108,255,0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.project-text blockquote {
+    border-left: 4px solid #646cff;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #cfcfcf;
+}
+
+/* Tech badges */
 .tech-badge {
     background-color: #1a1a1a;
     border: 1px solid #646cff;
@@ -42,14 +81,50 @@
     font-weight: 500;
     transition: all 0.3s ease;
 }
-
 .tech-badge:hover {
     background-color: #646cff;
     color: #fff;
 }
 
+/* Listes améliorées pour les projets */
+.project-text ul {
+    list-style: none; /* on enlève la puce classique */
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.project-text li {
+    position: relative;
+    padding-left: 2rem; /* espace pour la puce personnalisée */
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e6e6e6;
+    transition: transform 0.2s;
+}
+
+.project-text li::before {
+    content: "▹"; /* puce stylisée */
+    position: absolute;
+    left: 0;
+    color: #646cff; /* couleur du bleu principal */
+    font-weight: bold;
+}
+
+.project-text li:hover {
+    transform: translateX(3px);
+}
+
+.project-text li strong {
+    background: rgba(100,108,255,0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+}
+
+/* Responsive */
 @media (min-width: 768px) {
     .project-content {
         flex-direction: row;
+        align-items: flex-start;
     }
 }
