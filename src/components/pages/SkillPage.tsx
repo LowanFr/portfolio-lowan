@@ -1,5 +1,6 @@
 import '../../styles/skillpage.css';
-import Navbar from "../Navbar.tsx";
+import Navbar from "../utils/Navbar.tsx";
+import Footer from "../utils/Footer";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -265,18 +266,7 @@ export default function SkillPage() {
                 )}
             </motion.div>
 
-            {/* Pied de page simple */}
-            <footer className="footer">
-                <p>
-                    © {new Date().getFullYear()} Esteban DOUILLET —
-                    <a href="https://github.com/lowanfr" target="_blank" rel="noreferrer">
-                        GitHub
-                    </a> |
-                    <a href="https://www.linkedin.com/in/estebandouillet" target="_blank" rel="noreferrer">
-                        LinkedIn
-                    </a>
-                </p>
-            </footer>
+            <Footer />
         </div>
     );
 }

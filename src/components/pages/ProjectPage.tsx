@@ -2,7 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import "../../styles/project.css";
-import Navbar from "../Navbar.tsx";
+import Navbar from "../utils/Navbar.tsx";
+import Footer from "../utils/Footer.tsx";
 import pikacordImage from '../../assets/pikacord.png';
 import unosialImage from '../../assets/unosial.png';
 import inoxtagImage from '../../assets/inoxtag.png';
@@ -22,6 +23,8 @@ Nous avons collaboré avec des personnalités comme **Inoxtag**, en développant
 - Partenariats avec des entreprises telles que **Coca-Cola**.
 
 **Mon rôle :** maintenance de tous les bots et outils créés et gestion de la communauté pour assurer leur bon fonctionnement.
+
+Logo réalisé par **Hugo DROUET**.
         `,
         image: unosialImage,
         technologies: [
@@ -41,6 +44,8 @@ Nous avons collaboré avec des personnalités comme **Inoxtag**, en développant
 - **Gestion de la communauté** : suivi des retours, adaptation des fonctionnalités et amélioration constante du bot selon les besoins des utilisateurs.  
 - **Apprentissage et innovation** : ce projet m’a permis de consolider mes compétences en JavaScript, Node.js, architecture serveur et gestion de bases de données tout en développant ma créativité et ma capacité à résoudre des problèmes.
 - **Collaboration avec un graphiste** pour créer des visuels attrayants et engageants, renforçant l'identité du bot et améliorant l'expérience utilisateur.
+
+Logo réalisé par **Hugo DROUET**.
         `,
         image: pikacordImage,
         technologies: [
@@ -158,13 +163,7 @@ export default function ProjectPage() {
                 </div>
             </motion.div>
 
-            <footer className="footer">
-                <p>
-                    © {new Date().getFullYear()} Esteban DOUILLET —
-                    <a href="https://github.com/lowanfr" target="_blank" rel="noreferrer">GitHub</a> |
-                    <a href="https://www.linkedin.com/in/estebandouillet" target="_blank" rel="noreferrer">LinkedIn</a>
-                </p>
-            </footer>
+            <Footer />
         </div>
     );
 }

@@ -1,0 +1,28 @@
+.privacy-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    line-height: 1.7;
+}
+
+.privacy-page h1 {
+    font-size: 2.5rem;
+    color: #646cff;
+    margin-bottom: 1rem;
+}
+
+.privacy-page h2 {
+    font-size: 1.5rem;
+    color: #a5adff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-page p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #e6e6e6;
+}

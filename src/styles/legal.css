@@ -1,0 +1,37 @@
+.legal-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: system-ui, sans-serif;
+    color: #fff;
+    line-height: 1.7;
+    min-height: 80vh;
+}
+
+.legal-page h1 {
+    font-size: 2.5rem;
+    color: #646cff;
+    margin-bottom: 1.5rem;
+}
+
+.legal-page h2 {
+    font-size: 1.5rem;
+    color: #a5adff;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.legal-page p {
+    font-size: 1.1rem;
+    color: #e6e6e6;
+    margin-bottom: 1rem;
+}
+
+.legal-page a {
+    color: #646cff;
+    text-decoration: none;
+}
+
+.legal-page a:hover {
+    text-decoration: underline;
+}
