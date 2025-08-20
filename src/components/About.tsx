@@ -51,7 +51,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <img src={profileImage} alt="Lowan" />
+          <img src={profileImage} alt="Esteban DOUILLET" />
         </motion.div>
       </div>
     </motion.section>

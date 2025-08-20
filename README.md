@@ -1,4 +1,4 @@
-# 🌐 Portfolio - Lowan
+# 🌐 Portfolio - Esteban DOUILLET
 
 Bienvenue sur le dépôt de mon portfolio personnel, développé avec **React**, **Vite** et **TailwindCSS**.  
 Ce site présente mon parcours, mes projets et mes compétences en tant qu'étudiant en dernière année de Master **Sécurité Informatique, Réseaux et Architectures Virtuelles (SIRAV)**.
