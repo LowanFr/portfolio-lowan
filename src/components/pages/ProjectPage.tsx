@@ -146,9 +146,9 @@ export default function ProjectPage() {
                         <h1>{project.title}</h1>
                         <ReactMarkdown
                             components={{
-                                p: ({ node, ...props }) => <p {...props} />,
-                                li: ({ node, ...props }) => <li {...props} />,
-                                strong: ({ node, ...props }) => <strong {...props} />,
+                                p: (prop) => <p {...prop} />,
+                                li: (prop) => <li {...prop} />,
+                                strong: (prop) => <strong {...prop} />,
                             }}
                         >
                             {project.description}

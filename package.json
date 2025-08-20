@@ -1,7 +1,7 @@
 {
   "name": "portfolio-lowan",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "homepage": "https://lowanfr.github.io/portfolio-lowan",
   "scripts": {
