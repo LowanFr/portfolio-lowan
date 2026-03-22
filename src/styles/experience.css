@@ -1,0 +1,198 @@
+/* ─── Experience / Timeline ─────────────────────────────────────── */
+.experience-section {
+    padding: 6rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-section h2 {
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+}
+
+.experience-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+/* ─── Tabs ───────────────────────────────────────────────────────── */
+.exp-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.exp-tab {
+    padding: 0.45rem 1.25rem;
+    border-radius: 2rem;
+    border: 1.5px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.exp-tab:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.exp-tab.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+/* ─── Timeline ───────────────────────────────────────────────────── */
+.timeline {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.65rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-blue), var(--color-violet));
+    border-radius: 1px;
+}
+
+/* ─── Timeline item ──────────────────────────────────────────────── */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.25rem;
+}
+
+/* Point sur la ligne */
+.timeline-dot {
+    position: absolute;
+    left: -2.1rem;
+    top: 0.85rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-violet));
+    border: 2px solid var(--color-bg);
+    box-shadow: 0 0 0 3px rgba(79, 142, 247, 0.25);
+    flex-shrink: 0;
+}
+
+/* Carte */
+.timeline-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-card);
+    padding: 1.4rem 1.6rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timeline-card:hover {
+    border-color: rgba(79, 142, 247, 0.35);
+    box-shadow: 0 4px 24px rgba(79, 142, 247, 0.08);
+}
+
+.timeline-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.timeline-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.timeline-title {
+    font-family: var(--font-title);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.timeline-company {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    background: var(--color-border);
+    padding: 0.2rem 0.65rem;
+    border-radius: 1rem;
+    flex-shrink: 0;
+}
+
+.timeline-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ─── Badges distinctions ────────────────────────────────────────── */
+.timeline-awards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+}
+
+.award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: rgba(79, 142, 247, 0.1);
+    border: 1px solid rgba(79, 142, 247, 0.25);
+    color: var(--color-blue);
+}
+
+/* ─── Tags tech ──────────────────────────────────────────────────── */
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+}
+
+.timeline-tag {
+    padding: 0.2rem 0.65rem;
+    border-radius: 0.4rem;
+    background: var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.76rem;
+    font-weight: 500;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 1.75rem;
+    }
+    .timeline-header {
+        flex-direction: column;
+    }
+}

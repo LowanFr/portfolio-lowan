@@ -1,113 +1,154 @@
+/* ─── Page projet ────────────────────────────────────────────────── */
 .project-page {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem;
-    font-family: system-ui, sans-serif;
-    color: #fff;
+    padding: 3rem 2rem 5rem;
+    font-family: var(--font-body);
+    color: var(--color-text);
     min-height: 100vh;
     line-height: 1.7;
 }
 
-/* Bouton retour */
+/* ─── Bouton retour ──────────────────────────────────────────────── */
 .btn-back {
-    display: inline-block;
-    background-color: #646cff;
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--color-border);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1.1rem;
+    border-radius: 2rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-bottom: 2.5rem;
 }
 .btn-back:hover {
-    background-color: #535bf2;
-    transform: scale(1.05);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
 }
 
-/* Contenu principal */
+/* ─── Layout ─────────────────────────────────────────────────────── */
 .project-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
+    align-items: flex-start;
 }
 
+@media (min-width: 768px) {
+    .project-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Image principale */
+.project-content > img,
+.project-content > .project-emoji-placeholder {
+    width: 100%;
+    border-radius: var(--border-radius-card);
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .project-content > img,
+    .project-content > .project-emoji-placeholder {
+        width: 42%;
+        position: sticky;
+        top: 90px;
+    }
+}
+
+/* Placeholder emoji (projets sans image) */
+.project-emoji-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    border-radius: var(--border-radius-card);
+    border: 1px solid var(--color-border);
+}
+
+.project-emoji-placeholder span {
+    font-size: 5rem;
+}
+
+/* ─── Texte ──────────────────────────────────────────────────────── */
 .project-text {
-    max-width: 800px; /* limite la largeur du texte pour un meilleur confort */
+    flex: 1;
+    min-width: 0;
 }
 
 .project-text h1 {
-    color: #646cff;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-family: var(--font-title);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .project-text h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    color: #a5adff;
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .project-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    text-align: justify;
-    color: #e6e6e6;
+    font-size: 0.97rem;
+    margin-bottom: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
 }
 
-/* Mise en avant */
 .project-text p strong {
-    color: #ffffff;
-    background: rgba(100,108,255,0.2);
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.3rem;
+    color: var(--color-text);
+    font-weight: 600;
 }
 
 .project-text blockquote {
-    border-left: 4px solid #646cff;
+    border-left: 3px solid var(--color-blue);
     padding-left: 1rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: #cfcfcf;
+    color: var(--color-text-muted);
 }
 
-/* Tech badges */
-.tech-badge {
-    background-color: #1a1a1a;
-    border: 1px solid #646cff;
-    border-radius: 0.5rem;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-.tech-badge:hover {
-    background-color: #646cff;
-    color: #fff;
-}
-
-/* Listes améliorées pour les projets */
+/* ─── Liste ──────────────────────────────────────────────────────── */
 .project-text ul {
-    list-style: none; /* on enlève la puce classique */
+    list-style: none;
     padding-left: 0;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.25rem 0;
 }
 
 .project-text li {
     position: relative;
-    padding-left: 2rem; /* espace pour la puce personnalisée */
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #e6e6e6;
-    transition: transform 0.2s;
+    padding-left: 1.5rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
 }
 
 .project-text li::before {
-    content: "▹"; /* puce stylisée */
+    content: "▹";
     position: absolute;
     left: 0;
-    color: #646cff; /* couleur du bleu principal */
+    color: var(--color-blue);
     font-weight: bold;
 }
 
@@ -116,15 +157,24 @@
 }
 
 .project-text li strong {
-    background: rgba(100,108,255,0.2);
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.3rem;
+    color: var(--color-text);
+    font-weight: 600;
 }
 
-/* Responsive */
-@media (min-width: 768px) {
-    .project-content {
-        flex-direction: row;
-        align-items: flex-start;
-    }
+/* ─── Tech badges ────────────────────────────────────────────────── */
+.tech-badge {
+    background: var(--color-border);
+    border: 1px solid rgba(79, 142, 247, 0.2);
+    border-radius: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    font-family: var(--font-body);
+}
+.tech-badge:hover {
+    background: rgba(79, 142, 247, 0.12);
+    border-color: var(--color-blue);
+    color: var(--color-blue);
 }

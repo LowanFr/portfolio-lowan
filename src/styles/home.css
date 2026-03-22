@@ -1,69 +1,39 @@
-/* Container principal */
+/* ─── Root layout ────────────────────────────────────────────────── */
 #root {
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: #ffffff;
-    background-color: #242424;
-    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    padding-top: 64px; /* hauteur navbar fixe */
 }
 
-/* Footer */
+/* ─── Footer ─────────────────────────────────────────────────────── */
 .footer {
-    margin-top: 4rem;
-    font-size: 0.9rem;
-    color: #888;
+    margin-top: auto;
+    padding: 2rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem 1rem;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
 }
+
 .footer a {
-    color: #646cff;
-    text-decoration: none;
-    margin: 0 0.5rem;
-}
-.footer a:hover {
-    color: #535bf2;
-}
-
-/* Responsive text for headings */
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-}
-
-/* Buttons global style */
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1rem;
+    color: var(--color-text-muted);
     font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s, background-color 0.25s;
-}
-button:hover {
-    border-color: #646cff;
+    transition: color var(--transition-fast);
 }
 
-/* Light mode */
-@media (prefers-color-scheme: light) {
-    #root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    .footer {
-        color: #555;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
-    button:hover {
-        border-color: #747bff;
-    }
+.footer a:hover {
+    color: var(--color-primary);
+}
+
+.footer-sep {
+    color: var(--color-border);
 }
